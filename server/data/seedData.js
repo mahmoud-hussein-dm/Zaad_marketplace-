@@ -1,0 +1,460 @@
+const now = () => new Date().toISOString();
+
+const daysAgo = (days) => new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
+const hoursFromNow = (hours) => new Date(Date.now() + hours * 60 * 60 * 1000).toISOString();
+
+module.exports = {
+  config: {
+    usdSdgRate: 600,
+    storeBumpUsd: 5,
+    itemBumpRate: 0.05,
+    platformFeeRate: 0,
+    forbiddenKeywords: [
+      "سلاح",
+      "ذخيرة",
+      "مخدرات",
+      "مادة مخدرة",
+      "متفجرات",
+      "Explosive",
+      "Gun",
+      "Ammo",
+      "Drugs",
+      "Hate",
+      "كراهية"
+    ],
+    categories: [
+      {
+        id: "women-fashion",
+        icon: "👗",
+        name: { ar: "أزياء نسائية", en: "Women Fashion" }
+      },
+      {
+        id: "men-fashion",
+        icon: "🧥",
+        name: { ar: "أزياء رجالية", en: "Men Fashion" }
+      },
+      {
+        id: "electronics",
+        icon: "📱",
+        name: { ar: "إلكترونيات", en: "Electronics" }
+      },
+      {
+        id: "home-garden",
+        icon: "🏡",
+        name: { ar: "المنزل والحديقة", en: "Home & Garden" }
+      },
+      {
+        id: "beauty",
+        icon: "💄",
+        name: { ar: "الجمال", en: "Beauty" }
+      },
+      {
+        id: "sports",
+        icon: "⚽",
+        name: { ar: "رياضة", en: "Sports" }
+      },
+      {
+        id: "kids",
+        icon: "🧸",
+        name: { ar: "أطفال", en: "Kids" }
+      },
+      {
+        id: "collectibles",
+        icon: "🎞️",
+        name: { ar: "مقتنيات", en: "Collectibles" }
+      }
+    ],
+    cities: [
+      "الخرطوم",
+      "أم درمان",
+      "بحري",
+      "بورتسودان",
+      "مدني",
+      "كسلا",
+      "الفاشر"
+    ]
+  },
+  users: [
+    {
+      id: "user-sara",
+      name: "سارة عبدالله",
+      phone: "+249912000001",
+      email: "sara@example.com",
+      locale: "ar",
+      city: "الخرطوم",
+      roles: ["USER"],
+      rating: 4.9,
+      walletBalanceSDG: 8500,
+      strikes: 0,
+      storeId: "store-sara",
+      createdAt: daysAgo(30),
+      updatedAt: now()
+    },
+    {
+      id: "user-mohamed",
+      name: "محمد خالد",
+      phone: "+249912000002",
+      email: "mohamed@example.com",
+      locale: "ar",
+      city: "أم درمان",
+      roles: ["USER"],
+      rating: 4.7,
+      walletBalanceSDG: 4200,
+      strikes: 0,
+      storeId: "store-mohamed",
+      createdAt: daysAgo(20),
+      updatedAt: now()
+    },
+    {
+      id: "user-admin",
+      name: "نهى عثمان",
+      phone: "+249912000099",
+      email: "noha@example.com",
+      locale: "ar",
+      city: "الخرطوم",
+      roles: ["USER", "ADMIN", "REVIEWER", "SUPPORT", "FINANCE"],
+      rating: 5,
+      walletBalanceSDG: 15000,
+      strikes: 0,
+      createdAt: daysAgo(60),
+      updatedAt: now()
+    }
+  ],
+  stores: [
+    {
+      id: "store-sara",
+      userId: "user-sara",
+      name: { ar: "دولاب سارة", en: "Sara's Closet" },
+      bio: {
+        ar: "قطع مختارة بعناية من أزياء السيدات الحديثة.",
+        en: "Curated women's fashion staples."
+      },
+      logo: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=300&q=60",
+      bumpedUntil: hoursFromNow(24),
+      createdAt: daysAgo(30),
+      updatedAt: now()
+    },
+    {
+      id: "store-mohamed",
+      userId: "user-mohamed",
+      name: { ar: "تقنية محمد", en: "Mohamed Tech" },
+      bio: {
+        ar: "أجهزة إلكترونية مستعملة بحالة ممتازة.",
+        en: "Quality pre-loved electronics."
+      },
+      logo: "https://images.unsplash.com/photo-1512499617640-c2f999098c01?auto=format&fit=crop&w=300&q=60",
+      bumpedUntil: null,
+      createdAt: daysAgo(20),
+      updatedAt: now()
+    }
+  ],
+  listings: [
+    {
+      id: "listing-dress",
+      sellerId: "user-sara",
+      storeId: "store-sara",
+      title: {
+        ar: "فستان سهرة طويل أزرق",
+        en: "Blue evening gown"
+      },
+      description: {
+        ar: "فستان سهرة أنيق مقاس متوسط مع تطريز يدوي.",
+        en: "Elegant evening gown size M with hand embroidery."
+      },
+      photos: [
+        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=60"
+      ],
+      category: "women-fashion",
+      tags: ["فستان", "سهرة"],
+      condition: "LIKE_NEW",
+      priceSDG: 18000,
+      priceUSD: 30,
+      city: "الخرطوم",
+      status: "PUBLISHED",
+      bumpedUntil: hoursFromNow(48),
+      flags: [],
+      ai: {
+        suggestedCategory: "women-fashion",
+        suggestedPriceMin: 16000,
+        suggestedPriceMax: 20000,
+        qualityChecklist: [
+          "تأكدي من كي الفستان جيداً قبل التسليم",
+          "التقطي صوراً إضافية للجزء الخلفي"
+        ]
+      },
+      createdAt: daysAgo(6),
+      updatedAt: now()
+    },
+    {
+      id: "listing-shoes",
+      sellerId: "user-sara",
+      storeId: "store-sara",
+      title: {
+        ar: "حذاء رياضي أبيض",
+        en: "White sneakers"
+      },
+      description: {
+        ar: "حذاء رياضي مريح مقاس 39، استخدام بسيط.",
+        en: "Comfortable sneakers size 39, lightly used."
+      },
+      photos: [
+        "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=60"
+      ],
+      category: "sports",
+      tags: ["حذاء", "رياضي"],
+      condition: "GOOD",
+      priceSDG: 9000,
+      priceUSD: 15,
+      city: "الخرطوم",
+      status: "PUBLISHED",
+      bumpedUntil: null,
+      flags: [],
+      ai: {
+        suggestedCategory: "sports",
+        suggestedPriceMin: 8000,
+        suggestedPriceMax: 10000,
+        qualityChecklist: [
+          "التقط صوراً للكعب والنعل",
+          "اكتب ملاحظة عن أي خدوش"
+        ]
+      },
+      createdAt: daysAgo(10),
+      updatedAt: now()
+    },
+    {
+      id: "listing-phone",
+      sellerId: "user-mohamed",
+      storeId: "store-mohamed",
+      title: {
+        ar: "هاتف آيفون 12 برو ماكس",
+        en: "iPhone 12 Pro Max"
+      },
+      description: {
+        ar: "ذاكرة 256 جيجابايت، لون ذهبي، حالة ممتازة.",
+        en: "256GB, gold, excellent condition."
+      },
+      photos: [
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=60"
+      ],
+      category: "electronics",
+      tags: ["هاتف", "آيفون"],
+      condition: "LIKE_NEW",
+      priceSDG: 420000,
+      priceUSD: 700,
+      city: "أم درمان",
+      status: "PUBLISHED",
+      bumpedUntil: null,
+      flags: [],
+      ai: {
+        suggestedCategory: "electronics",
+        suggestedPriceMin: 400000,
+        suggestedPriceMax: 440000,
+        qualityChecklist: [
+          "تضمين صورة للإكسسوارات",
+          "اكتب حالة البطارية"
+        ]
+      },
+      createdAt: daysAgo(3),
+      updatedAt: now()
+    },
+    {
+      id: "listing-bag",
+      sellerId: "user-sara",
+      storeId: "store-sara",
+      title: {
+        ar: "حقيبة يد جلدية بنية",
+        en: "Brown leather handbag"
+      },
+      description: {
+        ar: "حقيبة أصلية من ماركة محلية، استخدام مرتين فقط.",
+        en: "Original local brand handbag, used twice."
+      },
+      photos: [
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=60"
+      ],
+      category: "women-fashion",
+      tags: ["حقيبة", "جلد"],
+      condition: "LIKE_NEW",
+      priceSDG: 25000,
+      priceUSD: 41.67,
+      city: "الخرطوم",
+      status: "PUBLISHED",
+      bumpedUntil: hoursFromNow(12),
+      flags: [],
+      ai: {
+        suggestedCategory: "women-fashion",
+        suggestedPriceMin: 23000,
+        suggestedPriceMax: 27000,
+        qualityChecklist: [
+          "صورة للبطانة الداخلية",
+          "اذكر إن كان هناك ضمان"
+        ]
+      },
+      createdAt: daysAgo(1),
+      updatedAt: now()
+    },
+    {
+      id: "listing-counterfeit",
+      sellerId: "user-mohamed",
+      storeId: "store-mohamed",
+      title: {
+        ar: "حبوب مخدرة قوية",
+        en: "Strong narcotic pills"
+      },
+      description: {
+        ar: "منتج محظور للأغراض الاختبارية.",
+        en: "Forbidden item for moderation testing."
+      },
+      photos: [
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=60"
+      ],
+      category: "beauty",
+      tags: ["مخدرات"],
+      condition: "NEW",
+      priceSDG: 5000,
+      priceUSD: 8.33,
+      city: "الخرطوم",
+      status: "FLAGGED",
+      bumpedUntil: null,
+      flags: ["auto-moderation"],
+      ai: {
+        suggestedCategory: "beauty",
+        suggestedPriceMin: 0,
+        suggestedPriceMax: 0,
+        qualityChecklist: []
+      },
+      createdAt: daysAgo(2),
+      updatedAt: now()
+    }
+  ],
+  orders: [
+    {
+      id: "order-001",
+      buyerId: "user-mohamed",
+      sellerId: "user-sara",
+      listingId: "listing-dress",
+      priceSDG: 18000,
+      priceUSD: 30,
+      deliveryMethod: "seller-arranged-COD",
+      status: "DELIVERED_CONFIRMED",
+      otp: "482193",
+      timeline: [
+        { status: "PLACED", at: daysAgo(5), note: "" },
+        { status: "AWAITING_HANDOVER", at: daysAgo(4), note: "courier-arranged" },
+        { status: "DELIVERED_CONFIRMED", at: daysAgo(3), note: "otp-confirmed" }
+      ],
+      disputeId: null,
+      createdAt: daysAgo(5),
+      updatedAt: daysAgo(3)
+    },
+    {
+      id: "order-002",
+      buyerId: "user-sara",
+      sellerId: "user-mohamed",
+      listingId: "listing-phone",
+      priceSDG: 420000,
+      priceUSD: 700,
+      deliveryMethod: "seller-arranged-COD",
+      status: "AWAITING_HANDOVER",
+      otp: "915204",
+      timeline: [
+        { status: "PLACED", at: daysAgo(1), note: "" },
+        { status: "AWAITING_HANDOVER", at: daysAgo(0.5), note: "preparing" }
+      ],
+      disputeId: "dispute-100",
+      createdAt: daysAgo(1),
+      updatedAt: daysAgo(0.5)
+    }
+  ],
+  ledger: [
+    {
+      id: "ledger-001",
+      userId: "user-sara",
+      type: "CREDIT",
+      amountSDG: 18000,
+      reason: "COD_EXPECTED",
+      referenceId: "order-001",
+      metadata: { status: "settled" },
+      createdAt: daysAgo(5)
+    },
+    {
+      id: "ledger-002",
+      userId: "user-sara",
+      type: "DEBIT",
+      amountSDG: 900,
+      reason: "BUMP",
+      referenceId: "listing-dress",
+      metadata: { kind: "item", durationHours: 72 },
+      createdAt: daysAgo(2)
+    },
+    {
+      id: "ledger-003",
+      userId: "user-sara",
+      type: "DEBIT",
+      amountSDG: 3000,
+      reason: "BUMP",
+      referenceId: "store-sara",
+      metadata: { kind: "store", durationDays: 7 },
+      createdAt: daysAgo(7)
+    },
+    {
+      id: "ledger-004",
+      userId: "user-mohamed",
+      type: "CREDIT",
+      amountSDG: 6000,
+      reason: "TOP_UP",
+      referenceId: null,
+      metadata: { method: "bank-transfer" },
+      createdAt: daysAgo(4)
+    }
+  ],
+  disputes: [
+    {
+      id: "dispute-100",
+      orderId: "order-002",
+      party: "buyer",
+      reason: "NOT_AS_DESCRIBED",
+      evidence: [
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=60"
+      ],
+      status: "UNDER_REVIEW",
+      resolution: null,
+      createdAt: daysAgo(0.5),
+      updatedAt: daysAgo(0.25)
+    }
+  ],
+  moderationQueue: [
+    {
+      id: "mod-001",
+      listingId: "listing-counterfeit",
+      reason: "forbidden-keyword",
+      aiScores: { keyword: 0.98 },
+      status: "PENDING",
+      reviewerId: null,
+      decision: null,
+      createdAt: daysAgo(2),
+      updatedAt: daysAgo(2)
+    }
+  ],
+  notifications: [
+    {
+      id: "notif-001",
+      userId: "user-sara",
+      type: "ORDER_UPDATE",
+      payload: { orderId: "order-002", message: "تم إنشاء طلب جديد" },
+      read: false,
+      createdAt: daysAgo(1)
+    }
+  ],
+  reviews: [
+    {
+      id: "review-001",
+      orderId: "order-001",
+      reviewerId: "user-mohamed",
+      revieweeId: "user-sara",
+      rating: 5,
+      comment: "منتج ممتاز والتسليم سريع",
+      createdAt: daysAgo(3)
+    }
+  ]
+};
