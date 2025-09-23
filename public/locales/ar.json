@@ -1,0 +1,182 @@
+{
+  "app": {
+    "title": "سوق السودان",
+    "tagline": "منصة بيع وشراء موثوقة مع الدفع عند الاستلام",
+    "language": {
+      "switch": "English",
+      "switchAr": "العربية"
+    },
+    "actions": {
+      "close": "إغلاق",
+      "save": "حفظ",
+      "cancel": "إلغاء",
+      "confirm": "تأكيد",
+      "apply": "تطبيق",
+      "viewAll": "عرض الكل",
+      "back": "عودة"
+    },
+    "status": {
+      "loading": "جاري التحميل...",
+      "empty": "لا توجد بيانات"
+    }
+  },
+  "nav": {
+    "buy": "اشتري",
+    "sell": "بيع",
+    "search": "بحث",
+    "orders": "الطلبات",
+    "listings": "معروضاتي",
+    "wallet": "المحفظة",
+    "store": "المتجر",
+    "settings": "الإعدادات",
+    "invite": "دعوة الأصدقاء",
+    "logout": "تسجيل الخروج",
+    "admin": "الإدارة",
+    "notifications": "الإشعارات"
+  },
+  "home": {
+    "heroTitle": "اكتشف ما يناسبك فوراً",
+    "heroSubtitle": "ابحث، تفاوض، واستلم طلبك نقداً عند الباب",
+    "searchPlaceholder": "ابحث عن فستان، هاتف، حذاء...",
+    "cityPlaceholder": "اختر المدينة",
+    "priceMin": "السعر الأدنى",
+    "priceMax": "السعر الأعلى",
+    "condition": "الحالة",
+    "filter": "تصفية",
+    "trending": "الشائع هذا الأسبوع",
+    "bumped": "معزز حالياً",
+    "newArrivals": "وصل حديثاً",
+    "aiGuardrails": "الحماية الذكية تمنع السلع المحظورة تلقائياً"
+  },
+  "conditions": {
+    "NEW": "جديد",
+    "LIKE_NEW": "كالجديد",
+    "GOOD": "جيد",
+    "FAIR": "مقبول",
+    "POOR": "ضعيف"
+  },
+  "listing": {
+    "price": "السعر",
+    "city": "المدينة",
+    "condition": "الحالة",
+    "bumpBadge": "معزز",
+    "viewDetails": "عرض التفاصيل",
+    "policiesTitle": "سياسة الأمان",
+    "policyCOD": "الدفع يتم نقداً عند الاستلام للبائع مباشرة",
+    "policyOTP": "التأكيد يتم برمز استلام من 6 أرقام",
+    "policyDispute": "إمكان فتح شكوى خلال 48 ساعة من التسليم",
+    "buyNow": "اشتري الآن",
+    "report": "الإبلاغ عن الإعلان",
+    "sellerRating": "تقييم البائع",
+    "aiPricingTitle": "تسعير ذكي",
+    "aiPricingRange": "نقترح سعراً بين {{min}} و {{max}} ج.س (متوسط {{avg}})",
+    "aiQualityTitle": "قائمة التحقق للجودة",
+    "aiModerationBlocked": "تم حجب الإعلان تلقائياً لمخالفته السياسات",
+    "aiModerationQueued": "الإعلان قيد المراجعة من الفريق"
+  },
+  "seller": {
+    "centerTitle": "مركز البائع",
+    "newListing": "إضافة إعلان جديد",
+    "form": {
+      "titleAr": "عنوان بالعربية",
+      "titleEn": "عنوان بالإنجليزية (اختياري)",
+      "descriptionAr": "وصف بالعربية",
+      "descriptionEn": "وصف بالإنجليزية (اختياري)",
+      "category": "التصنيف",
+      "price": "السعر بالجنيه السوداني",
+      "city": "المدينة",
+      "condition": "الحالة",
+      "photos": "روابط الصور (افصل بينها بفاصلة)",
+      "tags": "وسوم (افصل بينها بفاصلة)",
+      "submit": "نشر الإعلان",
+      "publishSuccess": "تم إنشاء الإعلان بنجاح",
+      "moderationBlocked": "تم إرسال الإعلان للمراجعة بسبب المحتوى",
+      "aiCategory": "تصنيف مقترح",
+      "aiPricing": "نطاق السعر المقترح",
+      "aiChecklist": "قائمة جودة مقترحة"
+    },
+    "listingsTitle": "إعلاناتي",
+    "bumpItem": "تعزيز",
+    "storeBump": "تعزيز المتجر لمدة 7 أيام",
+    "storeBumpDescription": "يعزز جميع إعلاناتك مقابل {{cost}} ج.س",
+    "storeBumpAction": "تعزيز المتجر",
+    "walletWarning": "الرصيد غير كاف"
+  },
+  "orders": {
+    "title": "الطلبات",
+    "tabBought": "مشترياتي",
+    "tabSold": "مبيعاتي",
+    "status": {
+      "PLACED": "تم الإنشاء",
+      "AWAITING_HANDOVER": "في انتظار التسليم",
+      "DELIVERED_CONFIRMED": "تم الاستلام",
+      "DISPUTED": "قيد النزاع",
+      "CANCELLED": "ملغي",
+      "RESOLVED": "محلول"
+    },
+    "awaitingOtp": "أدخل رمز الاستلام لتأكيد التسليم",
+    "confirmDelivery": "تأكيد الاستلام",
+    "otpPlaceholder": "رمز OTP",
+    "advance": "متابعة",
+    "openDispute": "فتح نزاع",
+    "disputeReason": "اختر سبب النزاع",
+    "disputeEvidence": "روابط صور أو فيديو (اختياري)",
+    "submitDispute": "إرسال النزاع",
+    "timeline": "الخط الزمني",
+    "deliveryNotes": "ملاحظات التسليم",
+    "codFlow": "الدفع عند الاستلام. لن يتم خصم أي مبلغ مسبقاً"
+  },
+  "wallet": {
+    "title": "المحفظة والرصيد",
+    "balance": "الرصيد الحالي",
+    "topUpTitle": "شحن الرصيد",
+    "amount": "المبلغ بالجنيه",
+    "method": "طريقة الشحن",
+    "proof": "رابط إثبات التحويل",
+    "submitTopUp": "إرسال طلب الشحن",
+    "ledgerTitle": "سجل الحركات",
+    "noEntries": "لا توجد حركات بعد",
+    "reason": {
+      "BUMP": "رسوم التعزيز",
+      "COD_EXPECTED": "تحصيل نقدي متوقع",
+      "TOP_UP": "شحن رصيد",
+      "PAYOUT": "تحويل أرباح",
+      "REFUND": "استرداد"
+    }
+  },
+  "admin": {
+    "title": "لوحة التحكم",
+    "flaggedListings": "إعلانات محجوبة",
+    "pendingModeration": "مراجعات قيد الانتظار",
+    "openDisputes": "نزاعات مفتوحة",
+    "metrics": {
+      "bumpRevenue": "إيرادات التعزيز",
+      "gmv": "قيمة المبيعات المتوقعة",
+      "lag": "متوسط زمن تأكيد الاستلام (ساعات)",
+      "cancellationRate": "معدل الإلغاء",
+      "activeSellers": "البائعون النشطون خلال 24 ساعة",
+      "usdRate": "سعر تحويل الدولار"
+    },
+    "updateRate": "تحديث سعر الصرف",
+    "resolveDispute": "حل النزاع",
+    "resolutionPlaceholder": "اكتب ملخص القرار",
+    "buyerRefund": "استرداد للمشتري",
+    "markResolved": "تأكيد الحل"
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "empty": "لا توجد إشعارات جديدة"
+  },
+  "store": {
+    "bumpSuccess": "تم تعزيز المتجر بنجاح",
+    "bumpCost": "التكلفة"
+  },
+  "search": {
+    "sortLabel": "ترتيب",
+    "sortRecent": "الأحدث",
+    "sortPriceLow": "السعر من الأقل للأعلى",
+    "sortPriceHigh": "السعر من الأعلى للأقل",
+    "filters": "خيارات التصفية",
+    "clear": "إعادة تعيين"
+  }
+}

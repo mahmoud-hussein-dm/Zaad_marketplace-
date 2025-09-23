@@ -1,0 +1,24 @@
+{
+  "name": "sudan-marketplace",
+  "version": "1.0.0",
+  "description": "Bilingual COD-first peer-to-peer marketplace for Sudan with in-app escrow accounting and AI safeguards.",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "seed": "node server/seed.js"
+  },
+  "keywords": [
+    "marketplace",
+    "sudan",
+    "cod",
+    "bilingual"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18"
+  }
+}

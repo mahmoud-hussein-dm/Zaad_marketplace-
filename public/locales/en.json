@@ -1,0 +1,182 @@
+{
+  "app": {
+    "title": "Sudan Marketplace",
+    "tagline": "Trusted cash-on-delivery buying and selling",
+    "language": {
+      "switch": "العربية",
+      "switchAr": "العربية"
+    },
+    "actions": {
+      "close": "Close",
+      "save": "Save",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "apply": "Apply",
+      "viewAll": "View all",
+      "back": "Back"
+    },
+    "status": {
+      "loading": "Loading...",
+      "empty": "Nothing to show yet"
+    }
+  },
+  "nav": {
+    "buy": "Buy",
+    "sell": "Sell",
+    "search": "Search",
+    "orders": "Orders",
+    "listings": "My listings",
+    "wallet": "Wallet",
+    "store": "Store",
+    "settings": "Settings",
+    "invite": "Invite friends",
+    "logout": "Logout",
+    "admin": "Admin",
+    "notifications": "Notifications"
+  },
+  "home": {
+    "heroTitle": "Find what fits instantly",
+    "heroSubtitle": "Search, match, and pay cash when it arrives",
+    "searchPlaceholder": "Search dresses, phones, sneakers...",
+    "cityPlaceholder": "Choose city",
+    "priceMin": "Min price",
+    "priceMax": "Max price",
+    "condition": "Condition",
+    "filter": "Filter",
+    "trending": "Trending this week",
+    "bumped": "Currently bumped",
+    "newArrivals": "New arrivals",
+    "aiGuardrails": "Smart AI keeps forbidden products out"
+  },
+  "conditions": {
+    "NEW": "New",
+    "LIKE_NEW": "Like new",
+    "GOOD": "Good",
+    "FAIR": "Fair",
+    "POOR": "Worn"
+  },
+  "listing": {
+    "price": "Price",
+    "city": "City",
+    "condition": "Condition",
+    "bumpBadge": "Bumped",
+    "viewDetails": "View details",
+    "policiesTitle": "Trust & safety",
+    "policyCOD": "Seller collects cash directly on delivery",
+    "policyOTP": "Delivery is confirmed with a 6 digit OTP",
+    "policyDispute": "Open a dispute within 48h if something is wrong",
+    "buyNow": "Buy now",
+    "report": "Report listing",
+    "sellerRating": "Seller rating",
+    "aiPricingTitle": "Smart pricing",
+    "aiPricingRange": "Suggested between {{min}} and {{max}} SDG (avg {{avg}})",
+    "aiQualityTitle": "Quality checklist",
+    "aiModerationBlocked": "Listing blocked automatically for policy risk",
+    "aiModerationQueued": "Listing queued for manual review"
+  },
+  "seller": {
+    "centerTitle": "Seller center",
+    "newListing": "Add new listing",
+    "form": {
+      "titleAr": "Arabic title",
+      "titleEn": "English title (optional)",
+      "descriptionAr": "Arabic description",
+      "descriptionEn": "English description (optional)",
+      "category": "Category",
+      "price": "Price in SDG",
+      "city": "City",
+      "condition": "Condition",
+      "photos": "Photo URLs (comma separated)",
+      "tags": "Tags (comma separated)",
+      "submit": "Publish",
+      "publishSuccess": "Listing published",
+      "moderationBlocked": "Listing sent to review due to policy risk",
+      "aiCategory": "Suggested category",
+      "aiPricing": "Suggested price band",
+      "aiChecklist": "Suggested quality steps"
+    },
+    "listingsTitle": "My listings",
+    "bumpItem": "Bump",
+    "storeBump": "Store bump for 7 days",
+    "storeBumpDescription": "Boosts all listings for {{cost}} SDG",
+    "storeBumpAction": "Boost store",
+    "walletWarning": "Insufficient balance"
+  },
+  "orders": {
+    "title": "Orders",
+    "tabBought": "Bought",
+    "tabSold": "Sold",
+    "status": {
+      "PLACED": "Placed",
+      "AWAITING_HANDOVER": "Awaiting handover",
+      "DELIVERED_CONFIRMED": "Delivered",
+      "DISPUTED": "Disputed",
+      "CANCELLED": "Cancelled",
+      "RESOLVED": "Resolved"
+    },
+    "awaitingOtp": "Enter the OTP to confirm delivery",
+    "confirmDelivery": "Confirm delivery",
+    "otpPlaceholder": "OTP code",
+    "advance": "Progress",
+    "openDispute": "Open dispute",
+    "disputeReason": "Select a dispute reason",
+    "disputeEvidence": "Photo / video URLs (optional)",
+    "submitDispute": "Submit dispute",
+    "timeline": "Timeline",
+    "deliveryNotes": "Delivery notes",
+    "codFlow": "Cash on delivery only. No upfront payment"
+  },
+  "wallet": {
+    "title": "Wallet & balance",
+    "balance": "Current balance",
+    "topUpTitle": "Top up balance",
+    "amount": "Amount in SDG",
+    "method": "Funding method",
+    "proof": "Transfer proof URL",
+    "submitTopUp": "Send top up",
+    "ledgerTitle": "Ledger",
+    "noEntries": "No movements yet",
+    "reason": {
+      "BUMP": "Bump fee",
+      "COD_EXPECTED": "Expected COD",
+      "TOP_UP": "Top up",
+      "PAYOUT": "Payout",
+      "REFUND": "Refund"
+    }
+  },
+  "admin": {
+    "title": "Operations dashboard",
+    "flaggedListings": "Flagged listings",
+    "pendingModeration": "Moderation queue",
+    "openDisputes": "Open disputes",
+    "metrics": {
+      "bumpRevenue": "Bump revenue",
+      "gmv": "Expected GMV",
+      "lag": "Avg COD confirmation lag (hours)",
+      "cancellationRate": "Cancellation rate",
+      "activeSellers": "Active sellers (24h)",
+      "usdRate": "USD → SDG rate"
+    },
+    "updateRate": "Update exchange rate",
+    "resolveDispute": "Resolve dispute",
+    "resolutionPlaceholder": "Decision notes",
+    "buyerRefund": "Buyer refund",
+    "markResolved": "Mark resolved"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "empty": "You're all caught up"
+  },
+  "store": {
+    "bumpSuccess": "Store bump activated",
+    "bumpCost": "Cost"
+  },
+  "search": {
+    "sortLabel": "Sort",
+    "sortRecent": "Newest",
+    "sortPriceLow": "Price low-high",
+    "sortPriceHigh": "Price high-low",
+    "filters": "Filters",
+    "clear": "Reset"
+  }
+}
